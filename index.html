@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Média</title>
+</head>
+<body>
+    <h1>Calcular Média do Aluno</h1>
+    <form method="POST">
+        Nome: <input type="text" name="nome" required><br><br>
+        Nota 1: <input type="number" step="any" name="nota1" required><br><br>
+        Nota 2: <input type="number" step="any" name="nota2" required><br><br>
+        Nota 3: <input type="number" step="any" name="nota3" required><br><br>
+        <input type="submit" value="Calcular">
+    </form>
+
+    {% if resultado %}
+        <hr>
+        {% if resultado.erro %}
+            <p style="color:red;">{{ resultado.erro }}</p>
+        {% else %}
+            <p><strong>Aluno:</strong> {{ resultado.nome }}</p>
+            <p><strong>Média:</strong> {{ resultado.media }}</p>
+            <p><strong>Situação:</strong> {{ resultado.situacao }}</p>
+        {% endif %}
+    {% endif %}
+</body>
+</html>

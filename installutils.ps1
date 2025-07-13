@@ -43,8 +43,7 @@ pip install virtualenv
 Write-Host "Installing pylint (code linter)..."
 pip install pylint
 
-Write-Host "Installing Jupyter..."
-pip install notebook
+
 
 # Install VSCode Python extension via command line
 Write-Host "Installing VSCode Python extension..."
